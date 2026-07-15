@@ -26,14 +26,20 @@ Shipping Market Data Analysis
 │   └── Raw BDI historical data
 
 ├── excel
-│   └── BDI market analysis workbook
+│   ├── BDI market analysis workbook
+│   └── Monthly BDI historical dataset
 
 ├── images
 │   ├── BDI_trend_analysis.png
-│   └── key_events_analysis.png
+│   ├── key_events_analysis.png
+│   └── bdi_trend_python.png
+
+├── python
+│   ├── bdi_analysis.py
+│   └── requirements.txt
 
 ├── report
-│   └── Analysis report
+│   └── BDI_Market_Analysis_Report_2020_2026.pdf
 
 └── README.md
 ```
@@ -44,11 +50,17 @@ Shipping Market Data Analysis
 
 ### 1. Data Collection
 
-Collected monthly BDI historical data from 2020 to 2026 and organized the dataset, including price changes and market fluctuations.
+Collected monthly BDI historical data from 2020 to 2026 and organized the dataset, including index prices and market fluctuations.
 
-### 2. Trend Analysis
+### 2. Excel Data Analysis
 
-Created visual charts to identify major changes in the dry bulk shipping market and analyzed important turning points.
+Used Excel to:
+
+- Organize and review monthly BDI data
+- Create a trend chart covering 2020 to 2026
+- Identify major market turning points
+- Summarize key events and market drivers
+- Develop personal insights into shipping market cycles
 
 ### 3. Key Events Analysis
 
@@ -59,6 +71,7 @@ Analyzed major market events affecting BDI movements, including:
 - Supply-demand imbalance
 - Interest rate changes
 - Energy crisis and geopolitical events
+- Changes in port congestion and vessel efficiency
 
 ### 4. Market Insights
 
@@ -67,26 +80,46 @@ Studied the relationship between:
 - Cargo demand
 - Vessel supply
 - Economic cycles
+- Port congestion
 - External shocks
+- Policy and regulatory changes
 
 to understand the reasons behind freight rate fluctuations.
+
+### 5. Python Data Analysis
+
+Used Python to improve the reproducibility of the data cleaning and visualization process.
+
+The Python script:
+
+- Uses `pandas` to read the original CSV dataset
+- Converts the date field into datetime format
+- Removes commas from price values and converts them into numeric data
+- Removes invalid or missing date and price values
+- Sorts the dataset chronologically
+- Uses `matplotlib` to generate a monthly BDI trend chart
+- Saves the generated chart automatically in the `images` folder
+
+The script successfully processed 79 monthly observations covering January 2020 to July 2026.
 
 ---
 
 ## Key Findings
 
-- Dry bulk shipping markets show strong cyclical characteristics.
+- The dry bulk shipping market shows strong cyclical characteristics.
 - Freight rate fluctuations are mainly influenced by the balance between cargo demand and vessel supply.
-- External events such as pandemics, energy crises and geopolitical conflicts can significantly affect market equilibrium.
-- Due to the long shipbuilding cycle, vessel supply usually adjusts slower than market demand.
+- The 2021 BDI increase was supported by stronger commodity demand, port congestion and reduced effective vessel capacity.
+- The market correction after 2021 reflected weaker global demand, tighter financial conditions and improved vessel availability.
+- External events such as pandemics, energy crises and geopolitical conflicts can significantly disrupt market equilibrium.
+- Because vessel supply adjusts slowly, sudden demand changes can create large freight rate movements.
 
 ---
 
 ## Visualization
 
-### BDI Trend Analysis
+### Excel BDI Trend Analysis
 
-![BDI Trend Analysis](images/BDI_trend_analysis.png)
+![Excel BDI Trend Analysis](images/BDI_trend_analysis.png)
 
 ---
 
@@ -96,10 +129,45 @@ to understand the reasons behind freight rate fluctuations.
 
 ---
 
+### Python-Generated BDI Trend Chart
+
+![Python-Generated BDI Trend Chart](images/bdi_trend_python.png)
+
+---
+
+## Tools Used
+
+- Microsoft Excel
+- Python
+- pandas
+- matplotlib
+- GitHub
+
+---
+
+## Project Limitations
+
+This project mainly focuses on the BDI itself and therefore provides a broad market-level analysis.
+
+Future analysis could include:
+
+- China iron ore import volume
+- Global coal and grain trade volumes
+- Dry bulk fleet growth
+- New vessel deliveries
+- Port congestion data
+- Vessel turnaround efficiency
+
+These indicators could provide more direct evidence of changes in cargo demand and vessel supply.
+
+---
+
 ## Conclusion
 
 Through analyzing BDI data from 2020 to 2026, this project improved my understanding of dry bulk shipping market cycles.
 
-The analysis shows that shipping markets are not driven by a single factor. Instead, freight rate changes are the result of interactions between global economic conditions, cargo demand, vessel supply and external events.
+The analysis shows that shipping markets are not driven by a single factor. Freight rate changes result from the interaction between global economic conditions, cargo demand, vessel supply, port efficiency and external events.
 
-This project demonstrates how data analysis can be applied to maritime industry research and market understanding.
+Excel was used for structured analysis, event interpretation and visual presentation. Python was used to automate data cleaning and trend-chart generation, improving the reproducibility of the project.
+
+This project demonstrates how Excel and basic Python tools can be applied to maritime market research and shipping data analysis.
